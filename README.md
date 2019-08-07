@@ -1,4 +1,4 @@
-ADD HERE: APP IMAGE
+![simpsons-quote-generator](https://github.com/sawyer-nye/simpsons-quote-machine/blob/master/meta/example1.jpg "example1.jpg")
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
