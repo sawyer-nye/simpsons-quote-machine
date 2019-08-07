@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+html {
+  background-color: tomato;
+}
+
+#wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+#quote-box {
+  border-radius: 8px;
+  background-color: white;
+  width: 600px;
+  max-height: 50%;
+  color: tomato;
+}
+
+#img-box {
+  max-height: 25%;
+}
+
+#text {
+  text-align: center;
+  font-size: 26px;
+  margin-top: 8px;
+}
+
+#author {
+  text-align: right;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-right: 8px;
+  font-style: italic;
+}
+
+#button-row {
+  text-align: right;
+}
+
+#new-quote-button {
+  font-size: 18px;
+  background-color: tomato;
+  color: white;
+  border: 1px transparent;
+  border-radius: 5px;
+  width: 200px;
+  height: 35px;
+  margin-top: 16px;
+  margin-bottom: 8px;
+  margin-right: 8px;
+}
+
+.big-quote {
+  font-family: sans-serif;
+  display: inline-block;
+  font-size: 40px;
+  font-weight: 550;
+}

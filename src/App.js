@@ -1,24 +1,68 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
-function App() {
+const Quote = () => {
+  const [quoteData, setQuoteData] = useState({ quote: null, character: null, image: null });
+
+  /*
+  // A simple promise chain
+  const getQuote = () => {
+    axios
+      .get('https://thesimpsonsquoteapi.glitch.me/quotes')
+      .then(response => {
+        console.log(response.data[0]);
+        setQuoteData(response.data[0]);
+      })
+      .catch(err => console.log(err));
+  }
+  */
+
+  // Equivalent of the above promise chain function, but with async/await
+  const getQuote = async () => {
+    try {
+      const response = await axios.get('https://thesimpsonsquoteapi.glitch.me/quotes');
+      console.log(response.data[0]);
+      setQuoteData(response.data[0]);
+    }
+    catch (err) {
+      console.log(err);
+      alert('Something went wrong while fetching the quote...');
+    }
+  }
+
+  useEffect(() => {
+    getQuote();
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id='wrapper'>
+      <div id='quote-box'>
+        <div id='text'>
+          <div className='big-quote'>"</div>
+          {quoteData.quote}
+          <div className='big-quote'>"</div>
+        </div>
+        <div id='author'>
+          - {quoteData.character}
+        </div>
+        <div id='button-row'>
+          <button id='new-quote-button' onClick={() => getQuote()}>New Quote</button>
+        </div>
+        
+      </div>
+      <div id='img-box'>
+        <img src={quoteData.image} alt={quoteData.character}/>
+      </div>
+      
+    </div>
+  );
+}
+
+const App = () => {
+
+  return (
+    <div id='content'>
+      <Quote />
     </div>
   );
 }
