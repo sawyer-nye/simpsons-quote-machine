@@ -36,24 +36,27 @@ const Quote = () => {
 
   return (
     <div id='wrapper'>
-      <div id='quote-box'>
-        <div id='text'>
-          <div className='big-quote'>"</div>
-          {quoteData.quote}
-          <div className='big-quote'>"</div>
-        </div>
-        <div id='author'>
-          - {quoteData.character}
-        </div>
-        <div id='button-row'>
-          <button id='new-quote-button' onClick={() => getQuote()}>New Quote</button>
-        </div>
-        
+      <div id='header'>
+        <h1>simpson-quotes.react</h1>
       </div>
-      <div id='img-box'>
-        <img src={quoteData.image} alt={quoteData.character}/>
-      </div>
-      
+      <div id='quote-wrapper'>
+        <div id='quote-box'>
+          <div id='text'>
+            <div className='big-quote'>"</div>
+            {quoteData.quote}
+            <div className='big-quote'>"</div>
+          </div>
+          <div id='author'>
+            - {quoteData.character}
+          </div>
+          <div id='button-row'>
+            <button id='new-quote-button' onClick={() => getQuote()}>New Quote</button>
+          </div>
+        </div>
+        <div id='img-box'>
+          <img src={quoteData.image} alt={quoteData.character}/>
+        </div>
+      </div>      
     </div>
   );
 }

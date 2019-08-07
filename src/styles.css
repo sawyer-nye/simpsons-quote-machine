@@ -4,13 +4,14 @@
   margin: 0;
   padding: 0;
   font-family: 'Ubuntu', sans-serif;
+  /*border: 1px solid black; */
 }
 
 html {
   background-color: tomato;
 }
 
-#wrapper {
+#quote-wrapper {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -65,4 +66,10 @@ html {
   display: inline-block;
   font-size: 40px;
   font-weight: 550;
+}
+
+#header {
+  color: white;
+  margin-top: 8px;
+  text-align: center;
 }
