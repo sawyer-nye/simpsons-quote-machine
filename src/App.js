@@ -4,6 +4,10 @@ import axios from 'axios';
 const Quote = () => {
   const [quoteData, setQuoteData] = useState({ quote: null, character: null, image: null });
 
+  const colors = ['Tomato', 'PaleTurquoise', 'Orchid', 'DarkKhaki', 'PaleVioletRed', 'SlateGrey', 'IndianRed'];
+
+  const getRandomColor = () => colors[Math.floor(Math.random() * (colors.length - 1))];
+
   /*
   // A simple promise chain
   const getQuote = () => {
@@ -20,6 +24,7 @@ const Quote = () => {
   // Equivalent of the above promise chain function, but with async/await
   const getQuote = async () => {
     try {
+      document.documentElement.style.setProperty('--current-color', getRandomColor());
       const response = await axios.get('https://thesimpsonsquoteapi.glitch.me/quotes');
       console.log(response.data[0]);
       setQuoteData(response.data[0]);
@@ -44,7 +49,6 @@ const Quote = () => {
           <div id='text'>
             <div className='big-quote'>"</div>
             {quoteData.quote}
-            <div className='big-quote'>"</div>
           </div>
           <div id='author'>
             - {quoteData.character}

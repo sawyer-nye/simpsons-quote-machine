@@ -1,5 +1,11 @@
 ![simpsons-quote-generator](https://github.com/sawyer-nye/simpsons-quote-machine/blob/master/meta/example1.jpg "example1.jpg")
 
+![simpsons-quote-generator](https://github.com/sawyer-nye/simpsons-quote-machine/blob/master/meta/example2.jpg "example2.jpg")
+
+![simpsons-quote-generator](https://github.com/sawyer-nye/simpsons-quote-machine/blob/master/meta/example3.jpg "example3.jpg")
+
+![simpsons-quote-generator](https://github.com/sawyer-nye/simpsons-quote-machine/blob/master/meta/example4.jpg "example4.jpg")
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
