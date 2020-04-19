@@ -32,6 +32,7 @@ const Quote = () => {
     catch (err) {
       console.log(err);
       alert('Something went wrong while fetching the quote...');
+      setQuoteData({ quote: 'No quote was fetched to display' });
     }
   }
 
